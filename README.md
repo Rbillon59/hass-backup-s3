@@ -33,6 +33,7 @@ GPGFingerprint:
 GPGPassphrase:
 incrementalFor: 7D
 removeOlderThan: 14D
+restore: false
 ```
 
 ### Option: `bucketUrl` (required)
