@@ -1,0 +1,33 @@
+{
+  "name": "Hass backup S3",
+  "version": "0.0.1",
+  "slug": "hass-backup-s3",
+  "description": "Backup your snapshots to S3 compatible object storage with local encryption and lifecycle policies",
+  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+  "startup": "application",
+  "boot": "manual",
+  "icon": "ico.png",
+  "logo": "ico.png",
+  "map": ["backup:rw"],
+  "apparmor": true,
+  "options": {
+  	"bucketUrl": "s3://my.s3.provider/myBucketName",
+  	"accessKey": null,
+	  "secretKey": null,
+	  "GPGFingerprint": "",
+    "GPGPassphrase":"",
+    "incrementalFor": "7D",
+    "removeOlderThan":"14D",
+    "restore": false
+  },
+  "schema": {
+	"bucketUrl": "str",
+	"accessKey": "str?",
+	"secretKey": "str?",
+	"GPGFingerprint": "str?",
+  "GPGPassphrase": "str?",
+  "incrementalFor": "str?",
+  "removeOlderThan": "str?",
+  "restore": "bool"
+  }
+}
