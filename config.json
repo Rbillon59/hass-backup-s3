@@ -1,7 +1,7 @@
 {
   "name": "Hass backup S3",
-  "version": "0.0.1",
-  "slug": "hass-backup-s3",
+  "version": "0.0.2",
+  "slug": "hass_backup_s3",
   "description": "Backup your snapshots to S3 compatible object storage with local encryption and lifecycle policies",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
   "startup": "application",
