@@ -19,7 +19,7 @@ Follow these steps to get the add-on installed on your system:
 ## How configure it
 
 In the configuration section, set the repository field to your s3 provider access key and secret key.
-
+See the wiki : https://github.com/Rbillon59/hass-backup-s3/wiki/How-to-create-bucket-and-get-keys
 
 ### Addon Configuration
 
