@@ -86,6 +86,8 @@ Call this addon from your backup automations to trigger it :
       data_template:
         name: >
           weekly_backup_{{ now().strftime('%Y-%m-%d') }}
+    # wait for snapshot done, then upload backup
+    - delay: '00:10:00'
     - service: hassio.addon_start
       data:
         addon: "home-assistant-s3"
