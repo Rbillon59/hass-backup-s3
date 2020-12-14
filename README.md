@@ -90,7 +90,7 @@ Call this addon from your backup automations to trigger it :
     - delay: '00:10:00'
     - service: hassio.addon_start
       data:
-        addon: "hass-backup-s3"
+        addon: "hass_backup_s3"
 ```
 
 Or launch it manually with the start button in the addon page !
