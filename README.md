@@ -1,5 +1,11 @@
 # Home Assistant Add-on: Hass-backup-s3
 
+[aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
+[amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
+[armhf-shield]: https://img.shields.io/badge/armhf-yes-green.svg
+[armv7-shield]: https://img.shields.io/badge/armv7-yes-green.svg
+[i386-shield]: https://img.shields.io/badge/i386-yes-green.svg
+
 ## What is it for ?
 
 The goal of this addon is not to reimplement home-assistant built in features, so you will not be able to make or delete a snapshot from this addon for example. It main goal is to extend the home-assistant features and to be able to upload your snapshots to any s3 API compatible bucket.
