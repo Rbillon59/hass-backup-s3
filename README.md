@@ -103,11 +103,15 @@ Call this addon from your backup automations to trigger it :
         addon: "3cfc8f0f_hass_backup_s3"
 ```
 
-Or launch it manually with the start button in the addon page !
+The service *hassio.addon_start* needs the addon slug to work. This is a concatenation of the first 8 char SHA1 hash of the repo url (lowercased) and the addon slug. If I ommit to update this part, you can check by yourself the hash part by taking the first 8 char of the hash here http://www.sha1-online.com/ filling "https://github.com/rbillon59/home-assistant-addons" in the form. It should not happen as the addons repository URL should not change. But in case of ..
+
+You can also launch it manually with the start button in the addon page !
 
 ## If you need to restore the backup
 
+Just change the Option: `restore` and set it to true and launch the addon manually. It will download the last available backup of your snapshots.
 
+:warning: Please, think about setting the restore option to false after restoring your backups, or every time you will call it from your automation it will restore the backups in your buckets and not upload it. 
 
 ## Support
 
