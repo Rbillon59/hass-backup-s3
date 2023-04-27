@@ -9,6 +9,7 @@
   "icon": "ico.png",
   "logo": "ico.png",
   "map": ["backup:rw"],
+  "init": false,
   "apparmor": true,
   "options": {
   	"bucketUrl": "s3://my.s3.provider/myBucketName",
