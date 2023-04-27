@@ -38,7 +38,9 @@ See the wiki : https://github.com/Rbillon59/hass-backup-s3/wiki/How-to-create-bu
 Add-on configuration:
 
 ```yaml
-bucketUrl: 's3://my.s3.provider/myBucketName'
+bucketName: myBucketName
+endpointUrl: https://s3.fr-par.scw.cloud
+region: fr-par
 accessKey: null
 secretKey: null
 GPGFingerprint: 
@@ -48,9 +50,25 @@ removeOlderThan: 14D
 restore: false
 ```
 
-### Option: `bucketUrl` (required)
+### Oprion: `sourceDir` (required)
 
-S3 compatible URL, could be s3:// or b2://[accessKey]:[secretKey]@[B2 bucket name].
+Default to /backup. The directory you want to backup
+
+/media and /ssl endpoints are mounted as readonly as well, so you can backup them too
+
+Only one argument is allowed at a time
+
+### Option: `bucketName` (required)
+
+Name of the bucket
+
+### Option: `endpointUrl` (required)
+
+endpoint URL of the s3 provider (contains region)
+
+### Option: `region` (required)
+
+region of the s3 provider
 
 ### Option: `accessKey` (required if not using Backblaze b2)
 
