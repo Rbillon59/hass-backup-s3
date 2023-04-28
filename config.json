@@ -8,7 +8,7 @@
   "boot": "manual",
   "icon": "ico.png",
   "logo": "ico.png",
-  "map": ["backup:ro", "media:ro", "ssl:ro"],
+  "map": ["backup:rw", "media:rw", "ssl:rw"],
   "init": false,
   "apparmor": true,
   "options": {
