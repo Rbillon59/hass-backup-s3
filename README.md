@@ -103,7 +103,7 @@ Default to false. Is set to true, will download the s3 content inside the backup
 Call this addon from your backup automations to trigger it :
 
 ```yaml
-- alias: Snapshot Once A Week
+- alias: Backup Once A Week
   trigger:
     - platform: time
       at: '10:00:00'
@@ -112,7 +112,7 @@ Call this addon from your backup automations to trigger it :
       weekday:
         - wed
   action:
-    - service: hassio.snapshot_full
+    - service: hassio.backup_full
       data_template:
         name: >
           weekly_backup_{{ now().strftime('%Y-%m-%d') }}
@@ -120,7 +120,8 @@ Call this addon from your backup automations to trigger it :
     - delay: '00:10:00'
     - service: hassio.addon_start
       data:
-        addon: "3cfc8f0f_hass_backup_s3"
+        addon: 3cfc8f0f_hass_backup_s3
+  mode: single
 ```
 
 The service *hassio.addon_start* needs the addon slug to work. This is a concatenation of the first 8 char SHA1 hash of the repo url (lowercased) and the addon slug. If I ommit to update this part, you can check by yourself the hash part by taking the first 8 char of the hash here http://www.sha1-online.com/ filling "https://github.com/rbillon59/home-assistant-addons" in the form. It should not happen as the addons repository URL should not change. But in case of ..
